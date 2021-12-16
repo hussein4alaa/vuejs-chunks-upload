@@ -24,7 +24,6 @@ import { uploadService } from 'vue-upload-chunks/dist';
 methods: {
         upload() {
                 this.progress = 0;
-                this.result = null;
                 uploadService.chunk('http://localhost/api/upload', this.file,
                     // Progress
                     percent => {
