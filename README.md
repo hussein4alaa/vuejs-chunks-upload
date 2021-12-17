@@ -1,7 +1,8 @@
 # vuejs-chunks-upload
 upload large files as chunks
+#### *note: This package works well with [pionl laravel-chunk-upload](https://github.com/pionl/laravel-chunk-upload)
 
-![image](![image](https://cdn.iconscout.com/icon/free/png-256/vuejs-1175052.png)
+![image](https://cdn.iconscout.com/icon/free/png-256/vuejs-1175052.png)
 
 
 ## Installation:
@@ -24,6 +25,7 @@ import { uploadService } from 'vue-upload-chunks/dist';
 methods: {
         upload() {
                 this.progress = 0;
+                this.result = null;
                 uploadService.chunk('http://localhost/api/upload', this.file,
                     // Progress
                     percent => {
